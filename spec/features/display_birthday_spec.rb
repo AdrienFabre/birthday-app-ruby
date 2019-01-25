@@ -6,6 +6,5 @@ feature 'display the celebration message' do
     select 'Jan', from: 'month'
     click_button "Submit"
     expect(page).to have_content "Your birthday will be in 1 day!"
-
   end
 end

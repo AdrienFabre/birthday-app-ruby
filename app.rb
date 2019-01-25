@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require_relative './lib/calculator'
 
 class Birthday < Sinatra::Base
 
@@ -10,12 +11,7 @@ post "/birthday" do
   @name = params[:name]
   @day = params[:day]
   @month = params[:month]
-  start_date = Time.now
-  end_date =  Time.new(Time.now.year, @month.to_i, @day.to_i)
-    if end_date < start_date
-        end_date += 365*24*60*60
-    end
-  @time_left = (end_date - start_date).to_i/60/60/24
+  @time_left = Calculator.new(@day,@month).time_left
   erb :birthday
 end
 

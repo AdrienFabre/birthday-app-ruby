@@ -1,4 +1,30 @@
-Congratulation <%= @name %> !!
-You were born day <%= @day %> in month <%= @month %>!
+<% if @time_left == 'birthday' %>
 
-Your birthday will be in <%= @time_left %> day!
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<style>
+body { font-family: 'Sofia';font-size: 50px;}
+</style>
+<body style="background-color: #50BBAA;" align="center">
+  <br>
+  <br>
+  Happy Birthday <%= @name %> !!
+</body>
+
+<% else %>
+
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<style>
+body {
+    font-family: 'Sofia';font-size: 35px;
+}
+</style>
+<body style="background-color: #50BBAA;" align="center">
+  <br>
+  <br>
+  Hey <%= @name %> !!
+  <br>
+  <br>
+  Your birthday will be in <%= @time_left %> day!
+</body>
+
+<% end %>
