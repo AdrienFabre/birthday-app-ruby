@@ -1,3 +1,3 @@
-### Makers software engineering bootcamp exercise - TDD - FullStack - Sinatra - Capybara
+### Makers software engineering bootcamp exercise - TDD - Sinatra - Capybara
 
 ---
